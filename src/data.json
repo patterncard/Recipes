@@ -1,0 +1,93 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Best salad in the world",
+      "description": "This is the recipe for the best salad in the world. It has a lots of carrots and lettuce!",
+      "serves": "2 people",
+      "inageUrl": "assets/spinach-chicken-pomegranate-salad-5938.jpg",
+      "ingerdients": [
+        {
+          "amount": "1 head",
+          "name": "lettuce"
+        },
+        {
+          "amount": "10",
+          "name": "carrots"
+        },
+        {
+          "amount": "2 tablespoons",
+          "name": "ranch dressing"
+        }
+      ],
+      "instructions": [
+        "remove lettuce leaves",
+        "add lettuce leaves to a large bowl",
+        "then add the carrot to the bowl",
+        "add the ranch dressing",
+        "then mix ingredients together in the bowl"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Caramel pancakes ",
+      "description": "This was a recipe handed down to me by my grandmother Ruth who use to make the best cholocate chips.",
+      "serves": "4 people",
+      "inageUrl": "assets/blur-breakfast-close-up-dairy-product-376464.jpg",
+      "ingerdients": [
+        {
+          "amount": "1 bag",
+          "name": "chocolate chips"
+        },
+        {
+          "amount": "2",
+          "name": "eggs"
+        },
+        {
+          "amount": "1 cup",
+          "name": "flour"
+        },
+        {
+          "amount": "1 cup",
+          "name": "sugar"
+        }
+      ],
+      "instructions": [
+        "get a large bowl",
+        "crack eggs into the bowl",
+        "add the rest of ingredinets",
+        "mix ingeredints with a whisk",
+        "then evenly place small clumps of cookie dough on a baking sheet",
+        "place baking sheet in oven for 12 minutes at 350 degrees F"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cinco de Nachos",
+      "description": "I discovered this recipe when I wnet on trip to Mexico. A nice lady taught me how make world's famous nachos.",
+      "serves": "2 adoults or 4 kids",
+      "inageUrl": "assets/burrito-chicken-delicious-dinner-461198.jpg",
+      "ingerdients": [
+        {
+          "amount": "1 bag ",
+          "name": "tortilla chips"
+        },
+        {
+          "amount": "1 pound",
+          "name": "shredded cheese"
+        },
+        {
+          "amount": "1 can",
+          "name": "refried beans"
+        }
+      ],
+      "instructions": [
+        "spread tortilla chips on large plate ",
+        "warm up beans in pot on the stove",
+        "sprinkle the shredded cheere on top of the chips",
+        "place plate in th oven for 10 min at 350 degrees F",
+        "finally remove plate oven and spread refried beans on top of the chips"
+      ]
+    }
+  ]
+}
