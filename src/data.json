@@ -5,7 +5,7 @@
       "title": "Best salad in the world",
       "description": "This is the recipe for the best salad in the world. It has a lots of carrots and lettuce!",
       "serves": "2 people",
-      "inageUrl": "assets/spinach-chicken-pomegranate-salad-5938.jpg",
+      "imageUrl": "assets/spinach-chicken-pomegranate-salad-5938.jpg",
       "ingerdients": [
         {
           "amount": "1 head",
@@ -33,7 +33,7 @@
       "title": "Caramel pancakes ",
       "description": "This was a recipe handed down to me by my grandmother Ruth who use to make the best cholocate chips.",
       "serves": "4 people",
-      "inageUrl": "assets/blur-breakfast-close-up-dairy-product-376464.jpg",
+      "imageUrl": "assets/blur-breakfast-close-up-dairy-product-376464.jpg",
       "ingerdients": [
         {
           "amount": "1 bag",
@@ -66,7 +66,7 @@
       "title": "Cinco de Nachos",
       "description": "I discovered this recipe when I wnet on trip to Mexico. A nice lady taught me how make world's famous nachos.",
       "serves": "2 adoults or 4 kids",
-      "inageUrl": "assets/burrito-chicken-delicious-dinner-461198.jpg",
+      "imageUrl": "assets/burrito-chicken-delicious-dinner-461198.jpg",
       "ingerdients": [
         {
           "amount": "1 bag ",
