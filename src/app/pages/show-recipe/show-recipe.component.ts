@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Subscription } from 'rxjs';
 import { Recipe } from 'src/app/classes/recipe.spec';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-show-recipe',
@@ -12,13 +14,13 @@ import { Recipe } from 'src/app/classes/recipe.spec';
 
 export class ShowRecipeComponent implements OnInit, OnDestroy {
   private subscription: Subscription[] = [];
-  private recipe: Recipe;
+  public recipe: Recipe;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private recipeService: RecipeService,
-    private loction: Location
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -31,14 +33,14 @@ export class ShowRecipeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscriptions.forEach(sub => sub.unsubscribe());
+    this.subscription.forEach(sub => sub.unsubscribe());
   }
 
   back() {
     this.location.back();
   }
 
-  deleterecipe(): void {
+  deleteRecipe(): void {
     this.recipeService.deleteRecipe(this.recipe.id);
     this.router.navigate(['']);
   }
