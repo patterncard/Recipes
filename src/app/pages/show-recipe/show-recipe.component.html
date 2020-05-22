@@ -14,4 +14,29 @@
       <p class="text-center">{{ recipe.description }}</p>
     </div>
   </div>
+  <div class="main">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 text-center">
+        <h3>
+          Serves: <span class="serves">{{ recipe.serves }}</span>
+          <hr />
+        </h3>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-4 text-center">
+        <div *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient.amount }} - {{ ingredient.name }}
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h3 class="text-center">Instructions</h3>
+      <ol>
+        <li *ngFor="let instruction of recipe.instructions">
+          {{ instruction }}
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>
