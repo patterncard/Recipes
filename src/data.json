@@ -6,7 +6,7 @@
       "description": "This is the recipe for the best salad in the world. It has a lots of carrots and lettuce!",
       "serves": "2 people",
       "imageUrl": "assets/spinach-chicken-pomegranate-salad-5938.jpg",
-      "ingerdients": [
+      "ingredients": [
         {
           "amount": "1 head",
           "name": "lettuce"
@@ -34,7 +34,7 @@
       "description": "This was a recipe handed down to me by my grandmother Ruth who use to make the best cholocate chips.",
       "serves": "4 people",
       "imageUrl": "assets/blur-breakfast-close-up-dairy-product-376464.jpg",
-      "ingerdients": [
+      "ingredients": [
         {
           "amount": "1 bag",
           "name": "chocolate chips"
@@ -67,7 +67,7 @@
       "description": "I discovered this recipe when I wnet on trip to Mexico. A nice lady taught me how make world's famous nachos.",
       "serves": "2 adoults or 4 kids",
       "imageUrl": "assets/burrito-chicken-delicious-dinner-461198.jpg",
-      "ingerdients": [
+      "ingredients": [
         {
           "amount": "1 bag ",
           "name": "tortilla chips"
