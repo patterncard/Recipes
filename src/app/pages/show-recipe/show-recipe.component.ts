@@ -28,7 +28,6 @@ export class ShowRecipeComponent implements OnInit, OnDestroy {
       this.route.paramMap.subscribe(params => {
         const recipeId = params.get('id');
         this.recipe = this.recipeService.getRecipeById(parseInt(recipeId));
-        // console.log(this.recipe)
       })
     )
   }
