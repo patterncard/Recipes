@@ -24,7 +24,7 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
     private recipeService: RecipeService,
     private location: Location,
     private fb: FormBuilder,
-    private routr: Router
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,11 +38,43 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
   }
 
   private createForm(): void {
+    this.recipeForm = this.fb.group({
+      title: [this.recipe.title, [Validators.required]],
+      description: [this.recipe.description, [Validators.required]],
+      serves: [this.recipe.description, [Validators.required]],
+      imageUrl: [this.recipe.description, [Validators.required]],
+      instructions: this.fb.array([]),
+      ingredients: this.fb.array([])
 
+    });
+
+    this.instructions = this.recipeForm.get('instructions') as FormArray;
+    this.ingredients = this.recipeForm.get('ingrediants') as FormArray;
+
+    this.recipe.instructions.forEach(instruction => {
+      this.instructions.push(this.createInstruction(instruction));
+    });
+
+    this.recipe.ingredients.forEach(ingredient => {
+      this.ingredients.push(this.createIngredient(ingredient.amount, ingredient.name));
+    });
+  }
+
+  private createInstruction(step: string): FormGroup {
+    return this.fb.group({
+      step: [step, [Validators.required]]
+    });
+  }
+
+  private createIngredient(amount: string, name: string): FormGroup {
+    return this.fb.group({
+      amount: [amount, [Validators.required]],
+      name: [name, [Validators.required]]
+    });
   }
 
   back() {
-    this.back();
+    this.location.back();
   }
 
   ngOnDestroy() {
