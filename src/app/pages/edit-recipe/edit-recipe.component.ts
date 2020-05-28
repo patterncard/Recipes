@@ -5,6 +5,7 @@ import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/classes/recipe';
 import { FormArray, FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Subscription } from 'rxjs';
+import { tick } from '@angular/core/testing';
 
 @Component({
   selector: 'app-edit-recipe',
@@ -71,6 +72,49 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
       amount: [amount, [Validators.required]],
       name: [name, [Validators.required]]
     });
+  }
+
+  addInstruction(): void {
+    this.instructions.push(this.createInstruction(''));
+  }
+
+  addIngredient(): void {
+    this.ingredients.push(this.createIngredient('', ''));
+  }
+
+  deleteInstruction(index: number): void {
+    const arrayControl = this.recipeForm.controls['instruction'] as FormArray;
+    arrayControl.removeAt(index);
+  }
+
+  deleteIngredient(index: number): void {
+    const arrayControl = this.recipeForm.controls['ingredients'] as FormArray;
+    arrayControl.removeAt(index);
+  }
+
+  submitForm(): void {
+    if (this.recipeForm.valid) {
+      const { title, description, serves, imageUrl, ingredients, instruction } = this.recipeForm.value;
+      const filterdInstructions = instruction.map(item => item.step);
+      const val = this.recipeService.updateRecipe(
+        new Recipe(
+          {
+            id: this.recipe.id,
+            title,
+            description,
+            serves,
+            imageUrl,
+            ingredients,
+            instructions: filterdInstructions
+          }
+        )
+      );
+
+      this.router.navigate([`/recipes/$this.recipe.id`]);
+    } else {
+      // else show alert
+      console.log("Form Error");
+    }
   }
 
   back() {
