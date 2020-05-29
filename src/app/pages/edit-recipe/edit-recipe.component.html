@@ -1,2 +1,60 @@
 <app-navbar></app-navbar>
-<p>edit-recipe works!</p>
+
+<img src="{{ recipe.imageUrl }}" alt="recipe.title" class="header-image" />
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-1"></div>
+    <div class="col-6">
+      <h1 class="text-center">Edit Recipe</h1>
+    </div>
+  </div>
+  <form [formGroup]="recipeForm" novalidate>
+    <div class="row">
+      <div class="form-group w-100 title d-flex justify-contetnt-center">
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <label class="mb-0"><h4 class="mb-0">Title:</h4></label>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" w-100 placeholder="Title..." formControlName="title" />
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <div class="form-group w-100 title d-flex justify-contetnt-center">
+      <div class="col-2 d-flex justify-content-center align-items-center">
+        <label class="mb-0">
+          <h4 class="mb-0">Description:</h4>
+        </label>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" w-100 placeholder="Description..." formControlName="description" />
+      </div>
+      <div class="col-1"></div>
+    </div>
+    </div>
+    <div class="form-group w-100 title d-flex justify-contetnt-center">
+      <div class="col-2 d-flex justify-content-center align-items-center">
+        <label class="mb-0">
+          <h4 class="mb-0">Serves:</h4>
+        </label>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" w-100 placeholder="Serves..." formControlName="serves" />
+      </div>
+      <div class="col-1"></div>
+    </div>
+    </div>
+    <div class="form-group w-100 title d-flex justify-contetnt-center">
+      <div class="col-2 d-flex justify-content-center align-items-center">
+        <label class="mb-0">
+          <h4 class="mb-0">Image Link':</h4>
+        </label>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" w-100 placeholder="Image Url..." formControlName="imageUrl" />
+      </div>
+      <div class="col-1"></div>
+    </div>
+    </div>
+  </form>
+</div>
