@@ -15,8 +15,8 @@ import { tick } from '@angular/core/testing';
 export class EditRecipeComponent implements OnInit, OnDestroy {
 
   private subscriptons: Subscription[] = [];
-  private recipe: Recipe;
-  private instructions: FormArray;
+  public recipe: Recipe;
+  public instructions: FormArray;
   private ingredients: FormArray;
   public recipeForm: FormGroup;
 
@@ -50,12 +50,10 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
     });
 
     this.instructions = this.recipeForm.get('instructions') as FormArray;
-    this.ingredients = this.recipeForm.get('ingrediants') as FormArray;
-
+    this.ingredients = this.recipeForm.get('ingredients') as FormArray;
     this.recipe.instructions.forEach(instruction => {
       this.instructions.push(this.createInstruction(instruction));
     });
-
     this.recipe.ingredients.forEach(ingredient => {
       this.ingredients.push(this.createIngredient(ingredient.amount, ingredient.name));
     });
