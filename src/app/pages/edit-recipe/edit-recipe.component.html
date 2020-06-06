@@ -119,5 +119,62 @@
         </div>
       </div>
     </div>
+    <div formArrayName="ingredients">
+      <div class="row d-flex justify-content-center">
+        <div class="col-1"></div>
+        <div class="col-6">
+          <h2 class="text-center">Ingredients</h2>
+        </div>
+      </div>
+      <div *ngFor="let control of ingredients.controls; let i = index">
+        <div
+          [formGroupName]="i"
+          class="form-group w-100 title d-flex justify-content-center"
+        >
+          <div class="col-2 d-flex justify-content-end align-items-center">
+            <label class="mb-0"
+              ><h4 class="mb-0">{{ i + 1 }}:</h4></label
+            >
+          </div>
+          <div class="col-3">
+            <input
+              type="text"
+              class="form-control w-100"
+              placeholder="amount..."
+              formControlName="amount"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="text"
+              class="form-control w-100"
+              placeholder="name..."
+              formControlName="name"
+            />
+          </div>
+          <div class="col-1 d-flex align-items-center">
+            <button class="btn btn-danger" (click)="deleteIngredient(i)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center">
+        <div class="col-1">
+          <div class="col-6">
+            <button class="btn btn-success w-100" (click)="addIngredient()">
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center back-and-save">
+      <div class="col-1"></div>
+      <div class="col-6 d-flex justify-content-center">
+        <button class="btn btn-primary" (click)="back()">Back</button>
+        <button class="btn btn-primary" (click)="submitForm()">Save</button>
+      </div>
+    </div>
   </form>
 </div>
