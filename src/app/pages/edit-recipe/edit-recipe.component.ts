@@ -17,7 +17,7 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
   private subscriptons: Subscription[] = [];
   public recipe: Recipe;
   public instructions: FormArray;
-  private ingredients: FormArray;
+  public ingredients: FormArray;
   public recipeForm: FormGroup;
 
   constructor(
@@ -93,8 +93,8 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
 
   submitForm(): void {
     if (this.recipeForm.valid) {
-      const { title, description, serves, imageUrl, ingredients, instruction } = this.recipeForm.value;
-      const filterdInstructions = instruction.map(item => item.step);
+      const { title, description, serves, imageUrl, ingredients, instructions } = this.recipeForm.value;
+      const filteredInstructions = instructions.map(item => item.step);
       const val = this.recipeService.updateRecipe(
         new Recipe(
           {
@@ -104,12 +104,12 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
             serves,
             imageUrl,
             ingredients,
-            instructions: filterdInstructions
+            instructions: filteredInstructions
           }
         )
       );
 
-      this.router.navigate([`/recipes/$this.recipe.id`]);
+      this.router.navigate([`/recipes/${this.recipe.id}`]);
     } else {
       // else show alert
       console.log("Form Error");
