@@ -101,7 +101,7 @@ export class NewRecipeComponent implements OnInit, OnDestroy {
         filteredInstructions
       );
 
-      this.router.navigate([`/recipes/${this.recipe.id}`]);
+      this.router.navigate(['']);
     } else {
       // else show alert
       console.log("Form Error");
