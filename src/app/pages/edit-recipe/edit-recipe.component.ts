@@ -43,8 +43,8 @@ export class EditRecipeComponent implements OnInit, OnDestroy {
     this.recipeForm = this.fb.group({
       title: [this.recipe.title, [Validators.required]],
       description: [this.recipe.description, [Validators.required]],
-      serves: [this.recipe.description, [Validators.required]],
-      imageUrl: [this.recipe.description, [Validators.required]],
+      serves: [this.recipe.serves, [Validators.required]],
+      imageUrl: [this.recipe.imageUrl, [Validators.required]],
       instructions: this.fb.array([]),
       ingredients: this.fb.array([])
 
